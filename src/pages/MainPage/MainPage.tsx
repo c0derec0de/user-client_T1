@@ -1,19 +1,20 @@
+import Header from "../../widgets/Header/Header";
 import MenuBar from "../../widgets/MenuBar/MenuBar";
-import "./MainPage.module.css";
+import UsersTable from "../../widgets/UsersTable/UsersTable";
+import styles from "./MainPage.module.css";
 
 export default function MainPage() {
   return (
-    <div className="page-layout">
-      <div className="main-content-wrapper">
-        <div className="content-center">
-          <h1>Главный контент</h1>
-          <p>Теперь контент действительно по центру, а меню справа</p>
-          {/* Ваш основной контент здесь */}
+    <div className={styles.pageLayout}>
+      <Header />
+      <div className={styles.bottomContainer}>
+        <aside className={styles.menuLeft}>
+          <MenuBar />
+        </aside>
+        <div className={styles.contentCenter}>
+          <UsersTable />
         </div>
       </div>
-      <aside className="menu-right">
-        <MenuBar />
-      </aside>
     </div>
   );
 }

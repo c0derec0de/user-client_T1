@@ -1,15 +1,13 @@
-import "./App.css";
+import { Routes, Route } from "react-router-dom";
 import MainPage from "./pages/MainPage/MainPage";
-import Header from "./widgets/Header/Header";
 
 function App() {
   return (
-    <div className="app-container">
-      <Header />
-      <div className="main-content">
-        <MainPage />
-      </div>
-    </div>
+    <Routes>
+      <Route path="/" element={<MainPage />} />
+      <Route path="/user/create" element={<MainPage />} />
+      <Route path="/login" element={<MainPage />} />
+    </Routes>
   );
 }
 
