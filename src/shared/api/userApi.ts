@@ -29,6 +29,9 @@ export const userEdit = {
   async updateUser(id: string, data: Partial<User>) {
     const response = await axios.patch(`${API_URL}/users/${id}`, data, {
       withCredentials: true,
+      headers: {
+        "Content-Type": "application/json",
+      },
     });
     return response.data;
   },

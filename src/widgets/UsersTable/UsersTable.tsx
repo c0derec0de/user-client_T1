@@ -10,9 +10,9 @@ interface User {
   name: string;
   surName: string;
   fullName: string;
-  birthDate?: string;
-  telephone?: string;
-  employment?: string;
+  birthDate?: string | null;
+  telephone?: string | null;
+  employment?: string | null;
   createdAt: string;
 }
 
@@ -118,7 +118,7 @@ const UsersTable: React.FC = () => {
         <EditUser
           open={isEditModalOpen}
           user={editingUser}
-          onClose={() => setIsEditModalOpen(false)}
+          onCancel={() => setIsEditModalOpen(false)}
           onUpdate={handleUpdated}
         />
       )}

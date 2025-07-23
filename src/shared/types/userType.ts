@@ -4,8 +4,9 @@ export interface User {
   name: string;
   surName: string;
   fullName: string;
-  birthDate?: string;
-  telephone?: string;
-  employment?: string;
+  birthDate?: string | null;
+  telephone?: string | null;
+  employment?: string | null;
   createdAt: string;
+  userAgreement?: boolean;
 }
